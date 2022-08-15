@@ -16,4 +16,9 @@ class BlogCategory extends Model
       'parent_id',
       'description',
     ];
+
+    public function post()
+    {
+        return $this->hasMany(BlogPost::class);
+    }
 }

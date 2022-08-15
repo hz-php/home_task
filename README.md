@@ -1,4 +1,4 @@
-13 задание Созданы модели и миграции постов и категорий
+<h2>13 задание</h2> Созданы модели и миграции постов и категорий
 Также создал для наполнения бд сидеры UsersTableSeeder и CategoriesTableseeder и фабрику для наполнения постов
 BlogPostFactory и заполнил бд тестовыми данными
 ![Image alt](Screenshot_1.png)
@@ -18,4 +18,16 @@ BlogPostFactory и заполнил бд тестовыми данными
 ![Image alt](Screenshot_3.png)
 ![Image alt](Screenshot_4.png)
 реализована валидация в классах BlogCategoryCreateRequest и BlogCategoryUpdateRequest
+<h2>14 Задание</h2>
+Создал контроллер и репозиторий PostController и соответственно BlogPostRepository
+
+вся логика запросов прописана в репозитрии для примера свзи таблиц ощштщь написал в методе index
+PostController получение связь таблицы categories и blog_posts хотя это запрос ни какой функционал
+не выполняет.
+![Image alt](Screenshot_5.png)
+он просто выводит заголовки
+![Image alt](Screenshot_6.png)
+
+
+
 
