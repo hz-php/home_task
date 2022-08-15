@@ -42,3 +42,5 @@ Route::group($groupData, function (){
         ->except(['show'])
         ->names('blog.admin.posts');
 });
+
+Route::get('admin/blog/posts/export', [\App\Http\Controllers\ExportController::class, 'export']);

@@ -10,6 +10,20 @@ class BlogPost extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $fillable =[
+        'category_id',
+        'user_id',
+        'slug',
+        'title',
+        'excerpt',
+        'content_raw',
+        'content_html',
+        'is_published',
+        'published_at',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
     /**
      * Категория статьи
      *

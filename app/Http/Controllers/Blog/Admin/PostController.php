@@ -33,11 +33,7 @@ class PostController extends BaseController
     public function index()
     {
         $paginator = $this->blogPostRepository->getAllWithPaginate();
-        //Это чисто для 14 задания
-        $categories = BlogCategory::join('blog_posts','blog_categories.id', '=','blog_posts.category_id')
-            ->get(); // Пример join
-
-        return view('blog.admin.posts.index', compact('paginator', 'categories'));
+        return view('blog.admin.posts.index', compact('paginator'));
     }
 
     /**

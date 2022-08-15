@@ -4,17 +4,9 @@
     <div class="container">
         <div class="justify-content-center row">
             <div class="col-md-12">
-                <!-- Для 14 задания-->
-                <div class="card">
-                    <div class="card-body">
-                        @foreach($categories as $category)
-                            {{ $category->title }} <br>
-                        @endforeach
-                    </div>
-                </div>
-                <!-- Для 14 задания end-->
                 <nav class="navbar navbar-toogleable-md navbar-light bg-faded">
                     <a href="{{ route('blog.admin.posts.create') }}}" class="btn btn-primary">Написать</a>
+                    <a href="posts/export" class="btn btn-primary">Экспортировать в ексель</a>
                 </nav>
                 <div class="card">
                     <div class="card-body">
