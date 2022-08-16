@@ -35,7 +35,7 @@ class BlogPostRepository extends CoreRepository
 
         $result = $this->startConditions()
             ->select($columns)
-            ->orderBy('id', 'DESC')
+            ->orderBy('id', 'ASC')
             ->with([
                 'category' => function ($query) {
                 $query->select(['id', 'title']);
@@ -45,5 +45,17 @@ class BlogPostRepository extends CoreRepository
             ->paginate(25);
 
         return $result;
+    }
+
+    /**
+     * Получить модель для редактирования в админке
+     *
+     * @param int $id
+     *
+     * @return Model
+     */
+    public function getEdit($id)
+    {
+        return $this->startConditions()->find($id);
     }
 }
